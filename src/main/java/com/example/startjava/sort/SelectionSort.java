@@ -19,8 +19,10 @@ public class SelectionSort {
         int n = arr.length;
 
         for(int i = 0; i < n - 1; i++) {
+            // 좌측 커서
             int minIdx = i;
 
+            // 좌측 커서 이후부터 비교
             for(int j = i + 1; j < n; j++) {
                 if(arr[j] < arr[minIdx]) {
                     minIdx = j;

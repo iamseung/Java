@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class InsertionSort {
 
     public static void main(String[] args) {
-        int[] arr = {3,5,1,74,23,57,2,99,13,47,12};
+//        int[] arr = {3,5,1,74,23,57,2,99,13,47,12};
+        int[] arr = {3,5,1,74,23};
         insertionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -20,14 +21,16 @@ public class InsertionSort {
 
         for(int i = 1; i < n ; i++) {
             int key = arr[i];
-            int j = i - 1;
 
-            while(j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j--;
+            int k = i - 1;
+
+            // 현재 위치보다 왼쪽을 비교하며 자신보다 큰 값은 뒤로 밀고 자리 자리를 찾아서 삽입
+            while(k >= 0 && arr[k] > key) {
+                arr[k + 1] = arr[k];
+                k--;
             }
 
-            arr[j + 1] = key;
+            arr[k + 1] = key;
         }
     }
 }

@@ -44,12 +44,3 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
-
-jmh {
-    warmupIterations = 3
-    iterations = 5
-    fork = 1
-    timeOnIteration = '1s'
-    benchmarkMode = ['Throughput', 'AverageTime']
-    threads = 1
-}

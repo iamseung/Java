@@ -17,6 +17,9 @@ public class Main {
 
     public static void foo(User b){        // 2
         System.out.println(b.hashCode()); // 193064360
+
+        // b 라는 파라미터에 a 가 가진 주소값을 복사하여 가짐
+        // 새로운 객체를 생성하고, 새로 생성된 주소값을 b가 가지며 a 는 원본 그대로 객체를 가리킴
         b = new User("jongnan");    // 3
         System.out.println(b.hashCode()); // 109961541
     }
